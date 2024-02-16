@@ -21,13 +21,21 @@ namespace CanvasTekenen
             InitializeComponent();
         }
 
+        private bool canPaint = false;
+        private void paintCanvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            canPaint = true;
+        }
 
+        private void paintCanvas_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            canPaint = false;
+        }
 
         private void paintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
+            if (canPaint)
             {
-               
                 Ellipse ellipse = new Ellipse();
                 ellipse.Height = 2;
                 ellipse.Width = 2;

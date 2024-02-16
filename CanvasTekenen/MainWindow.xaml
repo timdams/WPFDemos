@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Paint Lite Edition" Height="450" Width="800">
    
-        <Canvas Name="paintCanvas" MouseMove="paintCanvas_MouseMove"  >
+        <Canvas Name="paintCanvas" MouseMove="paintCanvas_MouseMove" MouseDown="paintCanvas_MouseDown" MouseUp="paintCanvas_MouseUp"  >
         <!--Belangrijk dat canvas een achtergrond heeft, anders werken mouse-events niets-->
         <Canvas.Background> 
             <SolidColorBrush Color="White" Opacity="0"/>
